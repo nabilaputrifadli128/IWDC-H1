@@ -14,6 +14,8 @@
         --lime: #c9ff65;
         --orange: #ff8d5c;
         --white: #fffdf9;
+        --green: #1f8d46;
+        --green-dark: #0e5c2e;
         --shadow: 7px 7px 0 var(--ink);
         --border: 3px solid var(--ink);
       }
@@ -147,7 +149,7 @@
         position: relative;
         min-height: 490px;
         border: var(--border);
-        background: var(--pink);
+        background: var(--bg);
         box-shadow: var(--shadow);
         overflow: hidden;
       }
@@ -176,25 +178,19 @@
         background: var(--blue);
       }
 
-      .photo-box {
+      .eco-logo {
         position: absolute;
-        inset: 60px 48px 48px 48px;
-        background: linear-gradient(135deg, rgba(17,17,17,0.1), rgba(17,17,17,0.35)),
-                    url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-        border: var(--border);
-        box-shadow: 8px 8px 0 var(--ink);
+        inset: 30px 26px 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
       }
 
-      .photo-tag {
-        position: absolute;
-        right: 18px;
-        bottom: 18px;
-        background: var(--white);
-        border: var(--border);
-        padding: 10px 12px;
-        font-weight: 900;
-        text-transform: uppercase;
-        transform: rotate(-4deg);
+      .eco-svg {
+        width: min(100%, 410px);
+        height: auto;
+        display: block;
       }
 
       .ticker {
@@ -405,9 +401,38 @@
           </div>
         </div>
 
-        <div class="picture-card" aria-label="Featured project image">
-          <div class="photo-box"></div>
-          <div class="photo-tag">Big ideas</div>
+        <div class="picture-card" aria-label="Eco logo artwork">
+          <div class="eco-logo">
+            <svg class="eco-svg" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Go green eco logo">
+              <defs>
+                <clipPath id="globeClip">
+                  <circle cx="250" cy="196" r="118"/>
+                </clipPath>
+              </defs>
+
+              <g transform="translate(0,10)">
+                <path d="M125 336 L220 150 L295 150 L360 336 Z" fill="#2d9a45" stroke="#111" stroke-width="8" stroke-linejoin="round"/>
+                <path d="M160 336 L245 195 L310 195 L368 336 Z" fill="#3cb15a" stroke="#111" stroke-width="8" stroke-linejoin="round"/>
+                <path d="M190 336 L270 225 L330 225 L375 336 Z" fill="#54c96d" stroke="#111" stroke-width="8" stroke-linejoin="round"/>
+
+                <path d="M150 310 L85 205 L158 149 L215 219 Z" fill="#3cb15a" stroke="#111" stroke-width="8" stroke-linejoin="round" transform="rotate(-90 150 310)"/>
+                <path d="M260 180 L155 95 L195 35 L310 130 Z" fill="#2d9a45" stroke="#111" stroke-width="8" stroke-linejoin="round" transform="rotate(15 260 180)"/>
+                <path d="M320 265 L370 170 L450 215 L400 335 Z" fill="#54c96d" stroke="#111" stroke-width="8" stroke-linejoin="round" transform="rotate(30 320 265)"/>
+
+                <circle cx="250" cy="196" r="118" fill="#1d1d1d" stroke="#111" stroke-width="8"/>
+
+                <g clip-path="url(#globeClip)">
+                  <path d="M168 166c28-22 55-41 88-45 12 17 26 37 21 59-11 31-41 47-59 62-18 14-56 18-75 1-21-18-12-55 25-77z" fill="#2b8a3f"/>
+                  <path d="M286 114c10 7 25 24 27 43 2 17-7 32-22 39-16 8-33 10-52 15-20 5-49 16-52 36-3 22 8 38 30 52 32 20 104 7 119-27 12-27 2-65-10-86-12-22-17-53-40-72z" fill="#223b2c" opacity="0.8"/>
+                  <path d="M190 220c14-19 34-29 53-32 23-3 52 5 64 24 16 25 7 53-13 73-21 21-48 31-79 28-23-2-41-18-49-40-8-20 4-42 24-53z" fill="#2b8a3f"/>
+                  <path d="M240 106c11 30 9 57-16 80-17 15-42 27-67 28-13 1-29-2-38-11 8-35 30-59 60-72 22-10 42-17 61-25z" fill="#1d1d1d"/>
+                  <path d="M235 155c12 6 20 18 23 34 5 24-8 49-34 58-6 2-18 4-31 2 2-22 9-39 21-53 11-13 16-24 21-41z" fill="#2b8a3f"/>
+                </g>
+
+                <text x="250" y="408" text-anchor="middle" font-size="72" font-family="Impact, sans-serif" font-weight="900" fill="#0e5c2e" letter-spacing="-3">GO GREEN</text>
+              </g>
+            </svg>
+          </div>
         </div>
       </section>
 
